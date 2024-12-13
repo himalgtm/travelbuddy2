@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBuddy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="home">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#flight-estimator">Flights</a></li>
+                    <li><a href="#popular-destinations">Popular Destinations</a></li>
+                    <li><a href="#favorites-section">Favorites</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+            <h2>Travel Buddy</h2>
+            <p>Journey to Explore World</p>
+            <p>Your ultimate companion for unforgettable travel experiences!</p>
+            <div class="header-buttons">
+                <button onclick="scrollToSection('flight-estimator')">Learn More</button>
+                <button onclick="scrollToSection('popular-destinations')">Explore Now</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="flight-estimator">
+        <div class="flight-banner">
+            <div class="banner-content">
+                <h1>Search Flights</h1>
+            </div>
+        </div>
+        <div class="flight-search-container">
+            <form id="flight-form">
+                <div class="search-fields">
+                    <div class="form-group">
+                        <label for="from-location">From</label>
+                        <input type="text" id="from-location" placeholder="Enter origin city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to-location">To</label>
+                        <input type="text" id="to-location" placeholder="Enter destination city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="departure-date">Date</label>
+                        <input type="date" id="departure-date" required>
+                    </div>
+                </div>
+                <div class="search-button">
+                    <button type="button" id="search-flights">Search Flights</button>
+                </div>
+            </form>
+        </div>
+        <div id="flight-results" class="hidden">
+            <h2>Available Flights</h2>
+            <div id="flight-cards-container" class="flight-cards"></div>
+        </div>
+    </section>    
+
+    <section id="popular-destinations">
+        <h2>Popular Destinations</h2>
+        <div id="destinations-container" class="destinations-grid"></div>
+    </section>
+
+    <section id="favorites-section">
+        <h2>Your Favorites</h2>
+        <div id="favorites-container" class="destinations-grid"></div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <h1 class="about-logo">Travel Buddy</h1>
+            <p class="about-description">
+                Explore the world with TravelBuddy, your ultimate travel planner! Discover personalized journeys, 
+                amazing deals, and everything you need for an unforgettable travel experience.
+            </p>
+            <h2>Contact Us</h2>
+            <p>Feel free to contact and reach us!</p>
+            <ul class="contact-details">
+                <li><i class="fas fa-phone"></i> +01 (123) 4567 90</li>
+                <li><i class="fas fa-envelope"></i> info.travelbuddy.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> 120 Bloomfield Avenue, New Jersey</li>
+            </ul>
+            <p>Subscribe to our newsletter for updates and news!</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Enter Your Email">
+                <button type="button">SUBSCRIBE</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TravelBuddy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
